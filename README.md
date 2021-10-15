@@ -9,8 +9,8 @@ This application is used to know the list of passwords of the wireless networks 
 2) Latest version of "pip"  
 
 ### Setup  
-cd Wifi-Passwords-CLI
-python setup.py  
+1) cd Wifi-Passwords-CLI  
+2) python setup.py  
 
 ### Run  
 python \_\_init\_\_.py
