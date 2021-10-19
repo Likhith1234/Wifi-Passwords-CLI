@@ -1,13 +1,14 @@
 import subprocess as sp
 import xlsxwriter as xl
-import os
+import os, getpass as gp
 
 class Wifi:
     def getPasswd(self):
         cmd = "netsh wlan show profiles"
         output = sp.getstatusoutput(cmd)
         fields = ["Sl. No.", "WiFi User Name", "Password"]
-        fileName = "Wifi Password.xlsx"
+        fileName = f"{os.getenv('SystemDrive')}//Users/{gp.getuser()}/Downloads/Wifi Password.xlsx"
+        print(fileName)
         workbook = xl.Workbook(fileName)
         worksheet = workbook.add_worksheet()
         worksheet.write_row(0, 0, fields)
